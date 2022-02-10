@@ -10,7 +10,7 @@ const Register = ({onRouteChange,loadUser}) => {
 
 const onSubmitRegister = () => {
   // console.log(registerEmail);
-    fetch('https://rocky-woodland-32948.herokuapp.com//register', {
+    fetch('https://rocky-woodland-32948.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

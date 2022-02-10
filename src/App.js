@@ -44,7 +44,6 @@ const particlesOptions = {
     }
   },
   "interactivity": {
-    "detect_on": "canvas",
     "events": {
       "onhover": {
         "enable": false,
@@ -95,7 +94,7 @@ function App() {
 
   const onButtonSubmit = () => {
     setImageUrl(input);
-    fetch('https://rocky-woodland-32948.herokuapp.com//imageurl', {
+    fetch('https://rocky-woodland-32948.herokuapp.com/imageurl', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -105,7 +104,7 @@ function App() {
       .then(response => response.json())
       .then(response => {
         if (input) {
-          fetch('https://rocky-woodland-32948.herokuapp.com//image', {
+          fetch('https://rocky-woodland-32948.herokuapp.com/image', {
             method: 'put',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
