@@ -12,7 +12,10 @@ const onSubmitRegister = () => {
   // console.log(registerEmail);
     fetch('https://rocky-woodland-32948.herokuapp.com/register', {
       method: 'post',
-      headers: {'Content-Type': 'application/json'},
+      headers: { 
+        'Content-Type': 'application/json',
+        'Origin' : 'https://smart-brain-face-recognition-v.herokuapp.com/'
+     },
       body: JSON.stringify({
         email: registerEmail.email,
         password: registerEmail.password,
