@@ -96,10 +96,7 @@ function App() {
     setImageUrl(input);
     fetch('https://rocky-woodland-32948.herokuapp.com/imageurl', {
       method: 'post',
-      headers: { 
-        'Content-Type': 'application/json',
-        'Origin' : 'https://smart-brain-face-recognition-v.herokuapp.com'
-     },
+      headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify({
         input: imageUrl
       })
@@ -109,10 +106,7 @@ function App() {
         if (input) {
           fetch('https://rocky-woodland-32948.herokuapp.com/image', {
             method: 'put',
-            headers: { 
-              'Content-Type': 'application/json',
-              'Origin' : 'https://smart-brain-face-recognition-v.herokuapp.com'
-           },
+            headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify({
               id: user.id
             })

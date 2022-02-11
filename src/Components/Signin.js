@@ -9,10 +9,7 @@ const Signin = ({onRouteChange,loadUser}) => {
 const onSubmitSignIn  = () => {
     fetch('https://rocky-woodland-32948.herokuapp.com/signin', {
         method: 'post',
-        headers: { 
-          'Content-Type': 'application/json',
-          'Origin' : 'https://smart-brain-face-recognition-v.herokuapp.com'
-       },
+        headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify({
           email: signInEmail.email,
           password: signInEmail.password
